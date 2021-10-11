@@ -1,0 +1,14 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  labels:
+    operators.coreos.com/sealed-secrets-operator-helm.sealed-secrets: ''
+  name: sealed-secrets-operator-helm-subscription
+  namespace: sealed-secrets
+spec:
+  channel: alpha
+  installPlanApproval: Manual
+  name: sealed-secrets-operator-helm
+  source: community-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: sealed-secrets-operator-helm.v0.0.2

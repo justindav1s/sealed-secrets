@@ -1,0 +1,16 @@
+apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJteS1yZWdpc3RyeS5leGFtcGxlOjUwMDAiOnsidXNlcm5hbWUiOiJ0aWdlciIsInBhc3N3b3JkIjoicGFzczExMyIsImVtYWlsIjoidGlnZXJAYWNtZS5jb20iLCJhdXRoIjoiZEdsblpYSTZjR0Z6Y3pFeE13PT0ifX19
+kind: Secret
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{".dockerconfigjson":"eyJhdXRocyI6eyJteS1yZWdpc3RyeS5leGFtcGxlOjUwMDAiOnsidXNlcm5hbWUiOiJ0aWdlciIsInBhc3N3b3JkIjoicGFzczExMyIsImVtYWlsIjoidGlnZXJAYWNtZS5jb20iLCJhdXRoIjoiZEdsblpYSTZjR0Z6Y3pFeE13PT0ifX19"},"kind":"Secret","metadata":{"annotations":{},"creationTimestamp":null,"name":"secret-tiger-docker","namespace":"sealedsecretstest"},"type":"kubernetes.io/dockerconfigjson"}
+    sealedsecrets.bitnami.com/managed: "true"
+  creationTimestamp: "2021-10-18T13:34:14Z"
+  name: secret-tiger-docker
+  namespace: sealedsecretstest
+  resourceVersion: "88274"
+  selfLink: /api/v1/namespaces/sealedsecretstest/secrets/secret-tiger-docker
+  uid: 16100779-3018-11ec-aa1d-06fdb2b783e2
+type: kubernetes.io/dockerconfigjson

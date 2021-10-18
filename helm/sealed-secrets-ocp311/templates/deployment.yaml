@@ -66,17 +66,17 @@ spec:
               path: /healthz
               port: 8080
           securityContext:
-            readOnlyRootFilesystem: true
-            {{- if .Values.securityContext.runAsUser }}
-            runAsNonRoot: true
-            runAsUser: {{ .Values.securityContext.runAsUser }}
-            {{- end }}
+            # readOnlyRootFilesystem: true
+            # {{- if .Values.securityContext.runAsUser }}
+            # runAsNonRoot: true
+            # runAsUser: {{ .Values.securityContext.runAsUser }}
+            # {{- end }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-      {{- if .Values.securityContext.fsGroup }}
-      securityContext:
-        fsGroup: {{ .Values.securityContext.fsGroup }}
-      {{- end }}
+      # {{- if .Values.securityContext.fsGroup }}
+      # securityContext:
+      #   fsGroup: {{ .Values.securityContext.fsGroup }}
+      # {{- end }}
       volumes:
       - name: tmp
         emptyDir: {}

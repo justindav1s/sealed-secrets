@@ -1,0 +1,19 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: secret-tiger-docker
+  namespace: sealedsecretstest
+spec:
+  encryptedData:
+    .dockerconfigjson: AgAhoh3mDu4H6q73os0oiRuYvngevvJIe/LbtuT0xVk9q0/0V8Sj7U+LB7YfIuUzyNTRfyLSp2B4HrbHKNSIcwsvvi+qrO2W5iUOibWx9yuyseHAb+mcH7yHLObTnAhGzWjWKEJmlpdhv2DlBJkRR8hV1wtPjmcKt7Rbvaf1QMD81/Y++n8SV8E51dOBFs9revJceCfZN90FAurloWCFFKgUIKQ0IpiW9XEOBgmBvJTBwSHZ3zffvM/VzBUBiV2Up9BYLuxtXv+N8m7v/9EgQ6HsEE+WtbuCUheJnBzL/lZwTG78QAtBhagBAgiFPEAakCDb5Z5BZDGFqmERjjHmLsOo7QN3qvOcxL3exmPKLUmYhE35nT8kdCgBRwrBP6rgAQVAYlzZZAfMoV7vWc5IUeQjzZiNxLSR/W4zpHYXnz62j8JhEtFouISEYMCPQITYC0xAYE4v+IpkZz4qUfRpMliev+zgIn1Fc/9jgX/js28H3UJ6nqgXYf2HUrrgtN1yk7n47OTlwfV0KFHSObaW1PV3gKKDcyj4suBxEifMgO9I9CM74CZ7bhwJRGhuPodVvPiJDWJ4wWoERz9hqYH1RsAoaV6fsbQbszzqrxtZ0zPHq/Twm+7K0Rf7B31dLKcP0yWMuAskVX29Snvy8BnH57QxMsxKlX9mUg6Sf3vRS6BBHOebWd5L223NmF1BoRRLBbB2hOMuq2VhECSLqg6hAasxMHrL80NY3wyTuH4EY0GCMc4zeOrSsycsD8cAR/s6LbFZJBvMulJZckTHhhRYygjSMQNkD4drIs8KqgSUT4WEreLgpZAXRL6BNo1mLxBB2fGQwwnzHjQ7ClvkQFnroLBgd1PCksiuSabYjcvM+RWAsS0eF9lvFSo=
+  template:
+    data: null
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/managed: "true"
+      creationTimestamp: null
+      name: secret-tiger-docker
+      namespace: sealedsecretstest
+    type: kubernetes.io/dockerconfigjson
+

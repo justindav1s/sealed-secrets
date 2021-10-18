@@ -1,3 +1,33 @@
+## JD making this work on OCP 3.11
+
+edit crds/sealedsecret-crd.yaml
+
+So that line one says :
+
+apiVersion: apiextensions.k8s.io/v1beta1
+
+instead of 
+
+apiVersion: apiextensions.k8s.io/v1
+
+v1beta1 is supported on ocp311, v on ocp4
+
+Also edit values to remove changes to surity context
+
+% diff values-original.yaml values.yaml 
+64,68c64,68
+< securityContext:
+<   # securityContext.runAsUser defines under which user the operator Pod and its containers/processes run.
+<   runAsUser: 1001
+<   # securityContext.fsGroup defines the filesystem group
+<   fsGroup: 65534
+---
+> securityContext: {}
+>   # # securityContext.runAsUser defines under which user the operator Pod and its containers/processes run.
+>   # runAsUser: 1001
+>   # # securityContext.fsGroup defines the filesystem group
+>   # fsGroup: 65534
+
 # Sealed Secrets
 
 This chart contains the resources to use [sealed-secrets](https://github.com/bitnami-labs/sealed-secrets).

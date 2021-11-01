@@ -4,13 +4,27 @@ edit crds/sealedsecret-crd.yaml
 
 So that line one says :
 
+```
 apiVersion: apiextensions.k8s.io/v1beta1
+```
 
 instead of 
 
+```
 apiVersion: apiextensions.k8s.io/v1
+```
 
 v1beta1 is supported on ocp311, v on ocp4
+
+Update Chart.yaml so that this chart will support the version of Kubernetes that OCP 3.11 uses :
+
+```
+7c7
+< kubeVersion: ">=1.16"
+---
+> kubeVersion: ">=1.10.0-0"
+
+```
 
 Also edit values to remove changes to surity context
 

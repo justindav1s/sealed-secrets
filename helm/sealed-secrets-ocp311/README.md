@@ -14,6 +14,7 @@ v1beta1 is supported on ocp311, v on ocp4
 
 Also edit values to remove changes to surity context
 
+```
 % diff values-original.yaml values.yaml 
 64,68c64,68
 < securityContext:
@@ -27,6 +28,11 @@ Also edit values to remove changes to surity context
 >   # runAsUser: 1001
 >   # # securityContext.fsGroup defines the filesystem group
 >   # fsGroup: 65534
+
+```
+
+
+**End of JD edits**
 
 # Sealed Secrets
 
